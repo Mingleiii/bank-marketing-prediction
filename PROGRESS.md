@@ -9,10 +9,10 @@
 
 | 维度 | 状态 |
 |---|---|
-| 项目阶段 | 🟢 初始化完成，准备开始开发 |
-| CI/CD | ⚪ 未配置 |
-| 代码仓库 | ⚪ 未初始化 |
-| 环境配置 | ⚪ 未完成 |
+| 项目阶段 | 🟢 US-1 完成，准备进入阶段二 |
+| CI/CD | 🟢 已配置（GitHub Actions） |
+| 代码仓库 | 🟢 已初始化并完成首次提交 |
+| 环境配置 | 🟢 依赖文件和配置已就绪 |
 
 ---
 
@@ -20,7 +20,7 @@
 
 | 编号 | 标题 | 状态 | 分支 | PR |
 |---|---|---|---|---|
-| US-1 | 初始化项目工程化与 CI | ⚪ Backlog | - | - |
+| US-1 | 初始化项目工程化与 CI | ✅ Done | main | - |
 | US-2 | 构建数据分析交互页面 | ⚪ Backlog | - | - |
 | US-3 | 离线训练预测模型 | ⚪ Backlog | - | - |
 | US-4 | 构建在线预测系统 | ⚪ Backlog | - | - |
@@ -30,13 +30,13 @@
 
 ## 3. 第一批 TODO
 
-### 阶段一：项目初始化与 CI 配置
-- [ ] 初始化 Git 仓库（.gitignore 配置）
-- [ ] 创建项目目录结构（src/, tests/, models/ 等）
-- [ ] 编写 requirements.txt 和 requirements-dev.txt
-- [ ] 配置 GitHub Actions CI 工作流
-- [ ] 编写基础单元测试框架（tests/__init__.py）
-- [ ] CI 跑通验证
+### 阶段一：项目初始化与 CI 配置 ✅
+- [x] 初始化 Git 仓库（.gitignore 配置）
+- [x] 创建项目目录结构（src/, tests/, models/ 等）
+- [x] 编写 requirements.txt 和 requirements-dev.txt
+- [x] 配置 GitHub Actions CI 工作流
+- [x] 编写基础单元测试框架（tests/__init__.py）
+- [x] CI 跑通验证
 
 ### 阶段二：数据处理模块
 - [ ] 实现 src/utils/data_loader.py（数据加载与验证）
@@ -92,5 +92,6 @@
 ## 6. 下一步
 
 **待确认后开始执行：**
-1. 初始化 Git 仓库和项目结构
-2. 配置 CI 工作流
+1. 数据处理模块开发（US-2 前置）
+2. 模型训练模块开发
+3. 数据分析页面实现
