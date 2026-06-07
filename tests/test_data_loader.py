@@ -2,6 +2,7 @@
 
 import pandas as pd
 import pytest
+
 from src.utils.data_loader import DataLoader
 
 

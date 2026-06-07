@@ -15,7 +15,7 @@ from sklearn.metrics import (
     recall_score,
     roc_auc_score,
 )
-from sklearn.model_selection import cross_val_score, train_test_split
+from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 
 from src.utils.data_loader import DataLoader
@@ -275,7 +275,7 @@ def main():
     trainer = ModelTrainer()
     model_path, metrics_path = trainer.train_and_save()
 
-    print(f"\n✅ Training complete!")
+    print("\n✅ Training complete!")
     print(f"Model: {model_path}")
     print(f"Metrics: {metrics_path}")
 

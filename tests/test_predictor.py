@@ -1,8 +1,8 @@
 """Tests for model predictor module."""
 
-from pathlib import Path
 
 import pytest
+
 from src.models.predictor import ModelPredictor
 
 
@@ -42,11 +42,11 @@ def test_predictor_initialization_without_model():
 def test_predictor_initialization_with_mock_model(tmp_path, sample_data):
     """Test predictor initialization with a mock model."""
     from sklearn.ensemble import RandomForestClassifier
-    from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
+
+    from src.utils.data_loader import DataLoader
 
     # Create and save mock preprocessor
     from src.utils.preprocessing import DataPreprocessor
-    from src.utils.data_loader import DataLoader
 
     loader = DataLoader()
     train_df = loader.load_train().head(100)
@@ -76,9 +76,10 @@ def test_predictor_predict(tmp_path, sample_data):
     """Test making a prediction."""
     from sklearn.ensemble import RandomForestClassifier
 
+    from src.utils.data_loader import DataLoader
+
     # Create and save mock preprocessor
     from src.utils.preprocessing import DataPreprocessor
-    from src.utils.data_loader import DataLoader
 
     loader = DataLoader()
     train_df = loader.load_train().head(100)
@@ -114,8 +115,8 @@ def test_predictor_predict_batch(tmp_path):
     """Test making batch predictions."""
     from sklearn.ensemble import RandomForestClassifier
 
-    from src.utils.preprocessing import DataPreprocessor
     from src.utils.data_loader import DataLoader
+    from src.utils.preprocessing import DataPreprocessor
 
     loader = DataLoader()
     train_df = loader.load_train().head(100)
@@ -195,8 +196,8 @@ def test_predictor_get_categorical_options(tmp_path):
     """Test getting categorical options."""
     from sklearn.ensemble import RandomForestClassifier
 
-    from src.utils.preprocessing import DataPreprocessor
     from src.utils.data_loader import DataLoader
+    from src.utils.preprocessing import DataPreprocessor
 
     loader = DataLoader()
     train_df = loader.load_train().head(100)
@@ -228,8 +229,8 @@ def test_predictor_get_model_info(tmp_path):
     """Test getting model information."""
     from sklearn.ensemble import RandomForestClassifier
 
-    from src.utils.preprocessing import DataPreprocessor
     from src.utils.data_loader import DataLoader
+    from src.utils.preprocessing import DataPreprocessor
 
     loader = DataLoader()
     train_df = loader.load_train().head(100)

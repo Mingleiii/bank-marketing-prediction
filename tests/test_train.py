@@ -1,6 +1,5 @@
 """Tests for model training module."""
 
-import pytest
 
 
 def test_model_trainer_initialization():
@@ -39,7 +38,7 @@ def test_model_trainer_train_all_models():
     results = trainer.train_all_models(train_df, val_df)
 
     assert len(results) == 4
-    for model_name, result in results.items():
+    for _model_name, result in results.items():
         assert "metrics" in result
         assert "model" in result
         assert "auc_roc" in result["metrics"]

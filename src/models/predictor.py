@@ -4,11 +4,10 @@ from pathlib import Path
 from typing import Any
 
 import joblib
-import numpy as np
 import pandas as pd
 
 from src.utils.data_loader import DataLoader
-from src.utils.preprocessing import DataPreprocessor, prepare_prediction_input
+from src.utils.preprocessing import prepare_prediction_input
 
 
 class ModelPredictor:
