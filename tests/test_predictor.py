@@ -1,6 +1,5 @@
 """Tests for model predictor module."""
 
-
 import pytest
 
 from src.models.predictor import ModelPredictor

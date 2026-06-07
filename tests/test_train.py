@@ -1,7 +1,6 @@
 """Tests for model training module."""
 
 
-
 def test_model_trainer_initialization():
     """Test model trainer initialization."""
     from src.models.train import ModelTrainer

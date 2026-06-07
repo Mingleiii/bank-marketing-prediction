@@ -250,7 +250,9 @@ class ModelTrainer:
         model_path = self.save_model(best_model, best_preprocessor, model_name)
 
         print("\nSaving metrics...")
-        metrics_path = self.save_metrics(results, model_name)
+        # Extract only metrics for JSON serialization
+        metrics_only = {k: v["metrics"] for k, v in results.items()}
+        metrics_path = self.save_metrics(metrics_only, model_name)
 
         # Print detailed classification report
         print("\nClassification Report:")
